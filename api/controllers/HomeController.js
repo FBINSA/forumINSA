@@ -17,7 +17,7 @@ module.exports = {
             }
 
             return res.view('Homepage/Homepage', {
-                inscriptionOpen: config.areInscriptionsOpened,
+               // inscriptionOpen: config.areInscriptionsOpened,
                 layout: 'layout',
                 title: 'Accueil - Forum by INSA'
             });
