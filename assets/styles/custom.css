@@ -17,7 +17,7 @@
 
 header {
   text-align: left;
-  background-image : linear-gradient(to bottom right, #0070C0 , #00C057); /*2018: #86156b, #284d8b *//* before: #F02FC2, #6094EA*/
+  background-image : linear-gradient(to bottom right, #00ffdc , #009bff); /*2018: #86156b, #284d8b *//* before: #F02FC2, #6094EA*/
   width: 100%;
 }
 
@@ -183,6 +183,12 @@ a, input, button {
     -o-filter: grayscale(100%);
 }
 
+.content img.center{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
 @media (max-width: 1030px){
     .content {
           margin-left: 10px;
@@ -201,6 +207,7 @@ a, input, button {
   float: none;
   display: inline-block;
 }
+
 
 .header{
   background-color: #3b3b3b;
