@@ -402,6 +402,11 @@ module.exports.routes = {
     
     '/INSA': {
         view: 'Insa/InsaDescription',
+        locals: {layout: 'layout', title: 'Liste des Entreprises'}
+    },
+
+    '/entreprisesliste' :    {
+        view: 'ListeEntreprise/listeEntreprise',
         locals: {layout: 'layout', title: 'INSA - Forum by INSA'}
     },
     
