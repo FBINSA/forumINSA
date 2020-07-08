@@ -42,16 +42,18 @@ module.exports = {
         
             YearSettings.update({year: settings.year}, {
                 forumPrice: req.param('forumPrice'),
-                sjdPrice: req.param('sjdPrice'),
+                forumPriceFoundation: req.param('forumPriceFoundation'),
+                forumPriceINSASU:req.param('forumPriceINSASU'),
+                forumPriceSU:rq.param('forumPriceSU')
+                /*sjdPrice: req.param('sjdPrice'),
                 forumPricePME: req.param('forumPricePME'),
                 sjdPricePME: req.param('sjdPricePME'),
                 forumPriceResearch: req.param('forumPriceResearch'),
                 sjdPriceResearch: req.param('sjdPriceResearch'),
-                forumPriceFoundation: req.param('forumPriceFoundation'),
                 sjdPriceFoundation: req.param('sjdPriceFoundation'),
                 offerPrice: req.param('offerPrice'),
                 mealPrice: req.param('mealPrice')
-                /*premiumPrice: req.param('premiumPrice'),
+                premiumPrice: req.param('premiumPrice'),
                 sjdSessionPrice: req.param('sjdSessionPrice'),
                 forumPricePME: req.param('forumPricePME'), // PME
                 sjdPricePME: req.param('sjdPricePME'),
