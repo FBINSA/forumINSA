@@ -35,7 +35,7 @@ var CriteriaBox =  React.createClass({
     if (this.state.GB)
       specialitiesSearch.push('Génie Biologique');
     if (this.state.GPE)
-      specialitiesSearch.push('Génie des Procédés et Environnement');
+      specialitiesSearch.push('Génie des Procédés Eau Energie Environnement');
     if (this.state.IS)
       specialitiesSearch.push('Ingénierie des Systèmes');
     if (this.state.GMM)
@@ -88,7 +88,7 @@ var CriteriaBox =  React.createClass({
                 <td><input id="GB" type="checkbox" name='Génie Biologique' onClick={this.handleCheckGB}/> <label>Génie Biologique</label></td>
               </tr>
               <tr>
-                <td><input id="GPE" type="checkbox" name='Génie des Procédés et Environnement' onClick={this.handleCheckGPE}/> <label>Génie des Procédés et Environnements</label></td>
+                <td><input id="GPE" type="checkbox" name='Génie des Procédés Eau Energie Environnement' onClick={this.handleCheckGPE}/> <label>Génie des Procédés Eau Energie Environnements</label></td>
                 <td><input id="GMM" type="checkbox" name='Mathématiques appliquées' onClick={this.handleCheckGMM}/> <label>Mathématiques appliquées</label></td>
               </tr>
               <tr>

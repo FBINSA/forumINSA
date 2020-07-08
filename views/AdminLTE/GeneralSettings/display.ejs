@@ -15,7 +15,65 @@
                 </div>
                 <form role="form" class="form-horizontal" method="POST" action="<%= sails.getUrlFor('Admin/SettingsController.updateYearSettings') %>">
                     <div class="box-body">
+                        
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            Pour les INSA Start-ups
+                        </h4>
+
                         <div class="form-group">
+                            <label for="description" class="col-sm-8 control-label">Prix Forum</label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="forumPrice" value="<%= yearSettings.forumPrice %>" required>
+                                    <span class="input-group-addon">€</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            Pour les autres Start-ups
+                        </h4>
+
+                        <div class="form-group">
+                            <label for="description" class="col-sm-8 control-label">Prix Forum</label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="forumPrice" value="<%= yearSettings.forumPrice %>" required>
+                                    <span class="input-group-addon">€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            Pour les Mécènes
+                        </h4>
+
+                        <div class="form-group">
+                            <label for="description" class="col-sm-8 control-label">Prix Forum</label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="forumPrice" value="<%= yearSettings.forumPrice %>" required>
+                                    <span class="input-group-addon">€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                            Pour les entreprises
+                        </h4>
+
+                        <div class="form-group">
+                            <label for="description" class="col-sm-8 control-label">Prix Forum</label>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="forumPrice" value="<%= yearSettings.forumPrice %>" required>
+                                    <span class="input-group-addon">€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--CODE UTILISE POUR LES FORMULES DE 2019-->
+                        <!--<div class="form-group">
                             <label for="name" class="col-sm-8 control-label">Prix pour un repas supplémentaire</label>
                             <div class="col-sm-4">
                                 <div class="input-group">
@@ -120,6 +178,7 @@
                                 </div></div>
                         </div>
                     </div>
+                -->
                     <div class="box-footer">
                         <button type="reset" class="btn btn-success pull-left">Réinitialiser</button>
                         <button type="submit" class="btn btn-info pull-right">Sauvegarder</button>

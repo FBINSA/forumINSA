@@ -39,7 +39,7 @@ module.exports = {
             enum: [ //Voir si on peut le déterminer depuis le ldap
                 'Automatique, Électronique',
                 'Génie Biologique',
-                'Génie des Procédés et Environnement',
+                'Génie des Procédés Eau Energie Environnement',
                 'Mathématiques appliquées',
                 'Génie Civil',
                 'Génie Mécanique',
