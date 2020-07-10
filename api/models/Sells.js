@@ -37,7 +37,7 @@ module.exports = {
             type: 'integer',
             required: true
         },
-        /*orderMeals: {
+        orderMeals: {
             type: 'integer',
             defaultsTo: 0,
             required: true
@@ -45,7 +45,7 @@ module.exports = {
         mealPrice: {
             type: 'integer',
             required: true
-        },*/
+        },
         billNumber: {
             type: 'integer',
             required: true

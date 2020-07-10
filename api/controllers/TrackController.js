@@ -35,17 +35,15 @@ module.exports = {
           inscriptionsAreOpen: found.areInscriptionsOpened,
           inscriptionDeadline: found.inscriptionDeadline,
           forumPrice: record.forumPrice,
-          forumPriceINSASU : record.forumPriceINSASU,
-          forumPriceSU : record.forumPriceSU,
-          forumPriceFoundation: record.forumPriceFoundation
-          /*sjdPrice: record.sjdPrice,
+          sjdPrice: record.sjdPrice,
           forumPricePME: record.forumPricePME,
           sjdPricePME: record.sjdPricePME,
           forumPriceResearch: record.forumPriceResearch,
           sjdPriceResearch: record.sjdPriceResearch,
+          forumPriceFoundation: record.forumPriceFoundation,
           sjdPriceFoundation: record.sjdPriceFoundation,
           offerPrice: record.offerPrice,
-          mealPrice: record.mealPrice*/
+          mealPrice: record.mealPrice
         })
       })
     })

@@ -95,17 +95,15 @@ module.exports = {
 
             YearSettings.update({year: settings.year}, {
                 forumPrice: req.param('forumPrice'),
-                forumPriceFoundation: req.param('forumPriceFoundation'),
-                forumPriceINSASU: req.param('forumPriceINSASU'),
-                forumPriceSU: req.param('forumPriceSU')
-                /*sjdPrice: req.param('sjdPrice'),
+                sjdPrice: req.param('sjdPrice'),
                 forumPricePME: req.param('forumPricePME'),
                 sjdPricePME: req.param('sjdPricePME'),
                 forumPriceResearch: req.param('forumPriceResearch'),
                 sjdPriceResearch: req.param('sjdPriceResearch'),
+                forumPriceFoundation: req.param('forumPriceFoundation'),
                 sjdPriceFoundation: req.param('sjdPriceFoundation'),
                 offerPrice: req.param('offerPrice'),
-                mealPrice: req.param('mealPrice')*/
+                mealPrice: req.param('mealPrice')
             }).exec((err, updated) => {
                 if (err) {
                     console.log('Price not updated : ' + err)

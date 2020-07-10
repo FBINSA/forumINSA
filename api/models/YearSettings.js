@@ -18,7 +18,7 @@ module.exports = {
 
         mealPrice: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 15
         },
 
@@ -28,46 +28,33 @@ module.exports = {
             defaultsTo: 1500
         },
 
-        forumPriceINSASU: {
-            type: 'Integer',
-            required: true,
-            defaultsTo: 1500
-        },
-
-        forumPriceSU: {
-            type: 'Integer',
-            required: true,
-            defaultsTo: 1500
-        },
-
-
         sjdPrice: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 1700
         },
 
         forumPricePME: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 500
         },
 
         sjdPricePME: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 600
         },
 
         forumPriceResearch: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 900
         },
 
         sjdPriceResearch: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 1000
         },
 
@@ -79,13 +66,13 @@ module.exports = {
 
         sjdPriceFoundation: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 600
         },
 
         offerPrice: {
             type: 'Integer',
-            required: false,
+            required: true,
             defaultsTo: 0
         }
     }
