@@ -38,7 +38,7 @@ module.exports = {
     
     generate: function(req, res) {
         let default_status = [
-            {name: 'Entreprise classique'}, {name: 'Start-up/PME'}, {name: 'Organisme de recherche'}, {name: 'Entreprise Fondation INSA Toulouse'}
+            {name: 'Entreprise classique'}, {name: 'Start-up/PME'}, {name: 'Organisme de recherche'}, {name: 'Entreprise Fondation INSA Toulouse'}, {name:'INSA Start-up'}
         ];
         CompanyStatus.create(default_status).exec((err, status) => {
             if(err) {
