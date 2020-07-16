@@ -43,7 +43,8 @@ module.exports = {
           forumPriceFoundation: record.forumPriceFoundation,
           sjdPriceFoundation: record.sjdPriceFoundation,
           offerPrice: record.offerPrice,
-          mealPrice: record.mealPrice
+          mealPrice: record.mealPrice,
+          forumPriceINSAStartUp:record.forumPriceINSAStartUp
         })
       })
     })

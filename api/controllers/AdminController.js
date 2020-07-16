@@ -103,7 +103,8 @@ module.exports = {
                 forumPriceFoundation: req.param('forumPriceFoundation'),
                 sjdPriceFoundation: req.param('sjdPriceFoundation'),
                 offerPrice: req.param('offerPrice'),
-                mealPrice: req.param('mealPrice')
+                mealPrice: req.param('mealPrice'),
+                forumPriceINSAStartUp: req.param('forumPriceINSAStartUp')
             }).exec((err, updated) => {
                 if (err) {
                     console.log('Price not updated : ' + err)

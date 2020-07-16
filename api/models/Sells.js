@@ -23,7 +23,7 @@ module.exports = {
 
         companyType: {
             type: 'string',
-            enum: ['Entreprise classique', 'Start-up/PME', 'Organisme de recherche', 'Entreprise Fondation INSA Toulouse'],
+            enum: ['INSA Start-up','Entreprise classique', 'Start-up/PME', 'Organisme de recherche', 'Entreprise Fondation INSA Toulouse'],
             required: true
         },
 
@@ -40,11 +40,11 @@ module.exports = {
         orderMeals: {
             type: 'integer',
             defaultsTo: 0,
-            required: true
+            required: false
         },
         mealPrice: {
             type: 'integer',
-            required: true
+            required: false
         },
         billNumber: {
             type: 'integer',
