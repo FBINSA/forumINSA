@@ -25,7 +25,7 @@ module.exports = {
         forumPrice: {
             type: 'Integer',
             required: true,
-            defaultsTo: 1500
+            defaultsTo: 1200
         },
 
         sjdPrice: {
@@ -37,7 +37,7 @@ module.exports = {
         forumPricePME: {
             type: 'Integer',
             required: true,
-            defaultsTo: 500
+            defaultsTo: 800
         },
 
         sjdPricePME: {
@@ -49,7 +49,7 @@ module.exports = {
         forumPriceResearch: {
             type: 'Integer',
             required: true,
-            defaultsTo: 900
+            defaultsTo: 500
         },
 
         sjdPriceResearch: {
@@ -61,7 +61,7 @@ module.exports = {
         forumPriceFoundation: {
             type: 'Integer',
             required: true,
-            defaultsTo: 500
+            defaultsTo: 800
         },
 
         sjdPriceFoundation: {
