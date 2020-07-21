@@ -460,7 +460,7 @@ module.exports = {
 
                     // Creation du numéro de facture entier
                     if (fullBillNumber === 0)
-                        fullBillNumber = found.billNumberMonth * 1000000 + month * 10000 + year;
+                        fullBillNumber = found.billNumberMonth * 10000 +  + year;
 
                     /* Creation de la vente */
                     Sells.create({
