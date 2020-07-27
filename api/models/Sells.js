@@ -23,7 +23,7 @@ module.exports = {
 
         companyType: {
             type: 'string',
-            enum: ['INSA Start-up','Entreprise classique', 'Start-up/PME', 'Organisme de recherche', 'Entreprise Fondation INSA Toulouse'],
+            enum: ['Entreprise classique', 'Start-up/PME', 'Organisme de recherche', 'Entreprise Fondation INSA Toulouse'],
             required: true
         },
 
