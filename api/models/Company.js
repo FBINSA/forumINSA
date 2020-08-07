@@ -213,7 +213,7 @@ module.exports = {
 
         orderMeals: {
             type: 'number',
-            required: true,
+            required: false,
         },
 
 
