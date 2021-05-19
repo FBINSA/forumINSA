@@ -48,8 +48,8 @@ module.exports = {
    },
    ssl: {
 //     ca: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/ca.cer'),
-     key: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/forumbyinsa.fr.key'),
-     cert: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/forumbyinsa.fr.cer')
+     key: require('fs').readFileSync('./.acme.sh/forumbyinsa.fr.key'),
+     cert: require('fs').readFileSync('./.acme.sh/forumbyinsa.fr.cer')
    },
 
   /***************************************************************************
