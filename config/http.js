@@ -21,8 +21,17 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-  // middleware: {
+  middleware: {
 
+/*    requireHttps: function(req, res, next) {
+      if (req.headers["x-forwarded-proto"] == "http") {
+        return res.redirect('https://' + req.headers.host + req.url);
+      } else if (req.isSocket) {
+        return res.redirect('wss://' + req.headers.host + req.url);
+      }
+      return next();
+    },
+  */
   /***************************************************************************
   *                                                                          *
   * The order in which middleware should be run for HTTP request. (the Sails *
@@ -30,24 +39,25 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
-
+     order: [
+    //   'requireHttps',
+       'startRequestTimer',
+       'cookieParser',
+       'session',
+       'myRequestLogger',
+       'bodyParser',
+       'handleBodyParserError',
+       'compress',
+       'methodOverride',
+       'poweredBy',
+       '$custom',
+       'router',
+       'www',
+       'favicon',
+       '404',
+       '500'
+     ],
+  }
   /****************************************************************************
   *                                                                           *
   * Example custom middleware; logs each request to the console.              *

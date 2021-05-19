@@ -37,20 +37,12 @@ module.exports = {
    * In this example, we'll assume you created a folder in your project,     *
    * `config/ssl` and dumped your certificate/key files there:               *
    ***************************************************************************/
-/*   lifejacket : {
-      ensureHttps: true,
-      host: 'forumbyinsa.fr',
-   },*/
-   httpsredirect : {
-      disabled : false,
-      hostname : '0.0.0.0',
-      port : 80,
-   },
-   ssl: {
-//     ca: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/ca.cer'),
-     key: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/forumbyinsa.fr.key'),
-     cert: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/forumbyinsa.fr.cer')
-   },
+
+  // ssl: {
+  //   ca: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl_gd_bundle.crt'),
+  //   key: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl.key'),
+  //   cert: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl.crt')
+  // },
 
   /***************************************************************************
    * The `port` setting determines which TCP port your app will be           *
@@ -69,9 +61,9 @@ module.exports = {
    ***************************************************************************/
 
   // port: process.env.PORT || 1337,
-  port: 443,
-//  ssl: true,
-  /***************************************************************************
+  // port: 80,
+  
+/***************************************************************************
    * The runtime "environment" of your Sails app is either typically         *
    * 'development' or 'production'.                                          *
    *                                                                         *
@@ -89,6 +81,6 @@ module.exports = {
    * 'development' environment.                                              *
    ***************************************************************************/
 
-//    environment: process.env.NODE_ENV || 'production'
+   // environment: process.env.NODE_ENV || 'development'
 
 };

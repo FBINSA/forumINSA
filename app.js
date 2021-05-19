@@ -23,7 +23,7 @@
 process.chdir(__dirname);
 
 // Ensure a "sails" can be located:
-(function() {
+(function(req, res) {
   var sails;
   try {
     sails = require('sails');
@@ -57,3 +57,4 @@ process.chdir(__dirname);
   // Start server
   sails.lift(rc('sails'));
 })();
+
