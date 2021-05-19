@@ -39,8 +39,8 @@ module.exports = {
 
         if(req.session.isAdmin)
             return res.redirect(sails.getUrlFor('AdminController.home'));
-
-        if (req.param('password') === sails.config.configFIE.adminPassword) {
+        var md5 = require('md5');
+        if (md5(req.param('password')) === sails.config.configFIE.adminPassword) {
             req.session.isAdmin = true;
             // if user has url to go
             if (req.session.cbUrl) {
@@ -85,7 +85,7 @@ module.exports = {
 
     setPrices: function (req, res) {
         var year = new Date().getFullYear();
-        
+
         YearSettings.findOne({year: year}).exec((err, settings) => {
             if (err) {
                 console.log('year not found and not created')
@@ -318,7 +318,7 @@ module.exports = {
     },
 
     displaySjdSessions: function (req, res) {
-        
+
         var allSpecialities = [];
         Speciality.find().exec((err, specialities) => {
             if(err) {
@@ -534,7 +534,7 @@ module.exports = {
             })
         })
     },
-    
+
     updateSell: function(req, res, next)  {
 
         if (!req.param('id'))    {
@@ -651,7 +651,7 @@ module.exports = {
 
 
     },
-    
+
     //datatables -----------
 
     getSells: function(req, res)    {
