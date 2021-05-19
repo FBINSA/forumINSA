@@ -39,8 +39,7 @@ module.exports = {
 
         if(req.session.isAdmin)
             return res.redirect(sails.getUrlFor('AdminController.home'));
-        var md5 = require('md5');
-        if (md5(req.param('password')) === sails.config.configFIE.adminPassword) {
+        if (sails.md5(String(req.param('password'))) === sails.config.configFIE.adminPassword) {
             req.session.isAdmin = true;
             // if user has url to go
             if (req.session.cbUrl) {
