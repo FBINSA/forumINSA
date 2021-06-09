@@ -41,16 +41,16 @@ module.exports = {
           ensureHttps: true,
           host: 'forumbyinsa.fr',
        },*/
-    /*    httpsredirect : {
-          disabled : false,
-          hostname : '0.0.0.0',
-          port : 80,
-       },
-       ssl: {
-    //     ca: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/ca.cer'),
-         key: require('fs').readFileSync('./.acme.sh/forumbyinsa.fr.key'),
-         cert: require('fs').readFileSync('./.acme.sh/forumbyinsa.fr.cer')
-       }, */
+    httpsredirect: {
+        disabled: false,
+        hostname: '0.0.0.0',
+        port: 80,
+    },
+    ssl: {
+        //     ca: require('fs').readFileSync('/home/pierre/.acme.sh/forumbyinsa.fr/ca.cer'),
+        key: require('fs').readFileSync('./.acme.sh/forumbyinsa.fr.key'),
+        cert: require('fs').readFileSync('./.acme.sh/forumbyinsa.fr.cer')
+    },
 
 
     /***************************************************************************
@@ -70,8 +70,8 @@ module.exports = {
      ***************************************************************************/
 
     // port: process.env.PORT || 1337,
-    port: 1337,
-    // port: 443,
+    // port: 1337,
+    port: 443,
 //  ssl: true,
     /***************************************************************************
      * The runtime "environment" of your Sails app is either typically         *
