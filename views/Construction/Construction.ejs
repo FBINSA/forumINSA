@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
     <style>
         body {
             background-color: #3b3b3b;
@@ -49,28 +53,54 @@
             overflow-y: auto;
         }
 
-        .left-col {
-            width: 47%;
+        #left-col {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .mid-col {
-            height: 100%;
-            width: 5%;
+        .left-col-landscape {
+            width: 47%;
+        }
+
+        .left-col-portrait {
+            /*width: 100%;*/
+            height: 50%;
+            overflow: hidden;
+        }
+
+        #mid-col {
             background-color: #FFFFFF;
         }
 
-        .right-col {
-            left: 3.7vw;
-            width: 47%;
+        .mid-col-landscape {
+            height: 100%;
+            width: 5%;
+        }
+
+        .mid-col-portrait {
+            height: 5%;
+            width: 100%;
+        }
+
+        #right-col {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             text-align: center;
             color: white;
+        }
+
+        .right-col-landscape {
+            left: 3.7vw;
+            width: 47%;
+            flex-direction: column;
+        }
+
+        .right-col-portrait {
+            width: 100%;
+            height: 50%;
+            flex-direction: row;
         }
 
         .container-fluid {
@@ -81,18 +111,43 @@
             /*display: grid;*/
         }
 
-        .title {
+        #title {
             font-weight: bold;
-            font-size: 2vw;
             font-family: 'Lato', sans-serif;
         }
 
-        .text-middle {
-            font: 1.5vw 'Open Sans', sans-serif;
+        .title-landscape {
+            font-size: 2vw;
         }
 
-        .text-bottom {
-            font: 1.1667vw 'Open Sans', sans-serif;
+        .title-portrait {
+            /*margin-left:-10vw;*/
+            font-size: 3vw;
+        }
+
+        #text-middle {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .text-middle-landscape {
+            font-size: 1.5vw ;
+        }
+
+        .text-middle-portrait {
+            font-size: 2.25vw;
+        }
+
+        #text-bottom {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .text-bottom-landscape {
+            font-size: 1.1667vw ;
+        }
+
+        .text-bottom-portrait {
+            /*margin-right:-10vw;*/
+            font-size: 1.75005vw;
         }
 
         /*.centered {*/
@@ -112,8 +167,12 @@
             left: 0;
         }
 
-        .imgbox {
+        .imgbox-landscape {
             width: 15%;
+        }
+
+        .imgbox-portrait {
+            width: 40%;
         }
 
         .v-space {
@@ -129,7 +188,7 @@
 </head>
 
 
-<body>
+<body class="test" onload="responsiveFunc()">
 <!--<div id="all">-->
 <!--    <div class="center-column">-->
 <!--    <img src="/images/logo_blanc.png">-->
@@ -143,30 +202,30 @@
 <!--    </div>-->
 <!--</div>-->
 <div class="h-100 w-100 container-fluid p-0 m-0 gx">
-    <div class="row h-100 w-100 m-0 p-0">
-        <div class="left-col col-6 m-0 p-0">
+    <div id="main-container" class="row h-100 w-100 m-0 p-0">
+        <div id="left-col" class="left-col-landscape col-6 m-0 p-0">
             <img class="w-100" src="/images/2021_image_left_maintenance.jpg">
         </div>
-        <div class="position-fixed w-100 h-100 container-fluid d-flex justify-content-center align-items-center">
-            <div class="mid-col"></div>
+        <div class="position-fixed w-100 h-100 container-fluid d-flex justify-content-center align-items-center p-0">
+            <div id="mid-col" class="mid-col-landscape"></div>
         </div>
-        <div class="position-fixed w-100 h-100 container-fluid d-flex justify-content-center align-items-center">
-            <div class="imgbox">
+        <div class="position-fixed w-100 h-100 container-fluid d-flex justify-content-center align-items-center p-0">
+            <div id="imgbox" class="imgbox-landscape">
                 <img class="centered" src="/images/2021_forumbyinsa1_1_cropped.jpg">
             </div>
         </div>
-        <div class="right-col col-6 p-0">
-            <div class="title p-0">
+        <div id="right-col" class="right-col-landscape col-6 p-0">
+            <div id="title" class="title-landscape p-0">
                 Le site est actuellement en <br>maintenance.<br>
                 Nous revenons bientôt !
             </div>
             <div class="v-space"></div>
-            <div class="text-middle">
+            <div id="text-middle" class="text-middle-landscape">
                 Pour participer à l'édition 2021 ou pour<br>
                 obtenir plus de renseignements, contactez :
             </div>
             <div class="v-space"></div>
-            <div class="text-bottom">
+            <div id="text-bottom" class="text-bottom-landscape">
                 <p class="font-weight-bold">Paul de la Taille</p>
                 <p class="font-italic">Vice-Président Relations Entreprises</p>
                 06.38.16.68.93<br>
@@ -180,7 +239,60 @@
         </div>
     </div>
 </div>
-
+<script type="text/javascript">
+    let responsiveFunc = function () {
+        if ($(window).height() >= $(window).width()) {
+            $('#right-col')
+                .addClass('right-col-portrait')
+                .removeClass('right-col-landscape')
+                .removeClass('col-6')
+            $('#mid-col')
+                .addClass('mid-col-portrait')
+                .removeClass('mid-col-landscape')
+            $('#left-col')
+                .addClass('left-col-portrait')
+                .removeClass('left-col-landscape')
+                .removeClass('col-6')
+            $('#imgbox')
+                .addClass('imgbox-portrait')
+                .removeClass('imgbox-landscape')
+            $('#title')
+                .addClass('title-portrait')
+                .removeClass('title-landscape')
+            $('#text-middle')
+                .addClass('text-middle-portrait')
+                .removeClass('text-middle-landscape')
+            $('#text-bottom')
+                .addClass('text-bottom-portrait')
+                .removeClass('text-bottom-landscape')
+        } else {
+            $('#right-col')
+                .addClass('right-col-landscape')
+                .removeClass('right-col-portrait')
+                .addClass('col-6')
+            $('#mid-col')
+                .addClass('mid-col-landscape')
+                .removeClass('mid-col-portrait')
+            $('#left-col')
+                .addClass('left-col-landscape')
+                .removeClass('left-col-portrait')
+                .addClass('col-6')
+            $('#imgbox')
+                .addClass('imgbox-landscape')
+                .removeClass('imgbox-portrait')
+            $('#title')
+                .addClass('title-landscape')
+                .removeClass('title-portrait')
+            $('#text-middle')
+                .addClass('text-middle-landscape')
+                .removeClass('text-middle-portrait')
+            $('#text-bottom')
+                .addClass('text-bottom-landscape')
+                .removeClass('text-bottom-portrait')
+        }
+    }
+    $(window).on('resize', function() {responsiveFunc()})
+</script>
 
 </body>
 </html>
